@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>My first three.js app</title>
+	<style>
+		body {
+			margin: 0;
+			touch-action: manipulation;
+		}
+	</style>
+
+
+	<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <script type="module" crossorigin src="./assets/index-BzDGGgS6.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-_lpEJEcv.css">
+</head>
+
+<body>
+	<div id="ExportBtn">Запустити AR</div>
+	<div class="column frame">
+		<a class="name">Рамка</a>
+		<div id="frameColor1" class="btn-blocks">
+			<div class="color-square-frame" name="anthracite" style="background-color: #1C1C1C;"></div>
+			<a>Антрацит</a>
+		</div>
+		<div id="frameColor2" class="btn-blocks">
+			<div class="color-square-frame" name="bronze" style="background-color: #8F837D;"></div>
+			<a>Бронза</a>
+		</div>
+		<div id="frameColor3" class="btn-blocks">
+			<div class="color-square-frame" name="cream" style="background-color: #CBC0AD;"></div>
+			<a>Кремовий</a>
+		</div>
+		<div id="frameColor4" class="btn-blocks">
+			<div class="color-square-frame" name="steel" style="background-color: #88807E;"></div>
+			<a>Сталь</a>
+		</div>
+		<div id="frameColor5" class="btn-blocks">
+			<div class="color-square-frame" name="white" style="background-color: #ecece7;"></div>
+			<a>Білий</a>
+		</div>
+	</div>
+	<div class="column btn">
+		<a class="name">Кнопки</a>
+		<div id="btnColor1" class="btn-blocks">
+			<div class="color-square-btn" name="anthracite" style="background-color: #1C1C1C;"></div>
+			<a>Антрацит</a>
+		</div>
+		<div id="btnColor2" class="btn-blocks">
+			<div class="color-square-btn" name="bronze" style="background-color: #8F837D;"></div>
+			<a>Бронза</a>
+		</div>
+		<div id="btnColor3" class="btn-blocks">
+			<div class="color-square-btn" name="cream" style="background-color: #CBC0AD;"></div>
+			<a>Кремовий</a>
+		</div>
+		<div id="btnColor4" class="btn-blocks">
+			<div class="color-square-btn" name="steel" style="background-color: #88807E;"></div>
+			<a>Сталь</a>
+		</div>
+		<div id="btnColor5" class="btn-blocks">
+			<div class="color-square-btn" name="white" style="background-color: #ecece7;"></div>
+			<a>Білий</a>
+		</div>
+	</div>
+	
+	<div class="color-div">
+		<a class="name">Кількість кнопок</a>
+		<div class="row">
+			<div id="one" class="number">1</div>
+			<div id="two" class="number">2</div>
+			<div id="three" class="number">3</div>
+		</div>
+
+
+	</div>
+	<model-viewer id="model-viewer" camera-controls src="" ios-src="" ar ar-placement="wall"
+		alt="3D Model">
+	</model-viewer>
+	<div id="container">
+	</div>
+
+</body>
+
+</html>
