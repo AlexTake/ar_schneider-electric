@@ -11,18 +11,29 @@ const viewer = document.getElementById('model-viewer')
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+    renderer.setSize(window.innerWidth, window.innerHeight);
+else
+    renderer.setSize(900, 900);
 container.appendChild(renderer.domElement);
 
 const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x95b4e6);
+scene.background = new THREE.Color(0xcccccc);
 scene.environment = pmremGenerator.fromScene(new RoomEnvironment(renderer), 0.04).texture;
+let camera
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+    camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
+else
+    camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
 
-const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.set(0, 0.05, 0.3);
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+    camera.position.set(0, 0.05, 0.4);
+else
+    camera.position.set(0, 0.05, 0.2);
+
 
 let frame_color = "anthracite";
 let button_count = "one";
@@ -30,13 +41,22 @@ let button_color = "anthracite";
 
 document.querySelectorAll('.color-square-frame').forEach(function (element) {
     element.addEventListener('click', function () {
+        document.querySelectorAll('.color-square-frame').forEach(function (el) {
+            el.parentElement.classList.remove("selected")
+        })
+        element.parentElement.classList.add("selected")
         frame_color = this.getAttribute('name');
         LoadFrame();
     });
 });
 
 document.querySelectorAll('.number').forEach(function (element) {
+
     element.addEventListener('click', function () {
+        document.querySelectorAll('.number').forEach(function (el) {
+            el.classList.remove("selected")
+        })
+        element.classList.add("selected")
         button_count = this.id;
         LoadButton();
     });
@@ -44,6 +64,10 @@ document.querySelectorAll('.number').forEach(function (element) {
 
 document.querySelectorAll('.color-square-btn').forEach(function (element) {
     element.addEventListener('click', function () {
+        document.querySelectorAll('.color-square-btn').forEach(function (el) {
+            el.parentElement.classList.remove("selected")
+        })
+        element.parentElement.classList.add("selected")
         button_color = this.getAttribute('name');
         LoadButton();
     });
@@ -82,15 +106,12 @@ function removeOldModel(name) {
         scene.remove(child);
     });
 }
-
-window.onresize = function () {
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
-};
+if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+    window.onresize = function () {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    };
 
 LoadFrame()
 LoadButton()

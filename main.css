@@ -1,17 +1,24 @@
 /* Стили для контейнера */
 .color-div {
+    z-index: 2;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 5%;
+    top: 2%;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgba(230, 230, 230, 0.966);
-    border-radius: 15px;
-    border: solid;
-    padding: 15px;
+}
+
+html {
+    font-family: 'OpenSans';
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.selected {
+    background-color: #FFFFFF !important;
 }
 
 #model-viewer {
@@ -29,82 +36,115 @@
 }
 
 .column {
+    z-index: 2;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    background-color: rgba(230, 230, 230, 0.966);
-    border-radius: 15px;
-    border: solid;
-    padding: 15px;
 }
 
 #ExportBtn {
-    background-image: url(./ar.png);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    background-position: 12px 50%;
-    background-color: #dbdbdb;
+    padding: 48px 60px 48px 48px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: #3DCD58;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
     bottom: 50px;
-    width: 150px;
-    padding: 0px 16px 0px 75px;
-    font-family: Roboto Regular, Helvetica Neue, sans-serif;
-    font-size: 24px;
-    color: #4285f4;
-    height: 60px;
-    border-radius: 18px;
+    font-size: 42px;
+    color: #FFFFFF;
+    border-radius: 60px;
     text-align: center;
     align-content: center;
+    font-weight: 700;
+    width: 800px;
+    height: 60px;
 }
 
 .frame {
-    top: 5%;
+    top: 2%;
     left: 2%;
 }
 
 .btn {
-    top: 5%;
+    top: 2%;
     right: 2%;
 }
 
-.btn-blocks a {
+.btn-blocks a,
+.btn-blocks2 a {
+    padding-top: 10px;
     margin: 5px 0px 10px 0px;
 }
 
-.btn-blocks {
-    display: contents;
-    margin-bottom: 10px;
+.btn-blocks,
+.btn-blocks2 {
+    height: 213px;
+    width: 192px;
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    margin: 15px 0px;
+    border-radius: 48px;
 }
+
 
 /* Стили для цветных квадратов */
 .color-square-btn,
 .color-square-frame,
 .color-square {
-    width: 75px;
-    height: 75px;
-    border-radius: 15px;
+    width: 132px;
+    height: 132px;
+    margin-top: 15px;
+    border-radius: 30px;
 }
 
 
 /* Стили для цифр */
 .number {
-    font-size: 24px;
-    width: 90px;
-    height: 50px;
+    background-color: #D9D9D9;
+    font-size: 36px;
+    width: 120px;
+    height: 120px;
     align-items: center;
     display: flex;
     justify-content: center;
-    border: groove;
+    border-radius: 36px;
+    margin: 15px;
 }
 
 .name {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 20px;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo {
+    z-index: 2;
+    position: absolute;
+    bottom: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#btn-image {
+    width: 96px;
+    height: 96px;
 }
