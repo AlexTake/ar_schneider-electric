@@ -18,8 +18,8 @@
 
 html {
     font-family: openSanstmp;
-    font-weight: bold;
     font-size: 24px;
+    color: #222222;
 }
 
 .selected {
@@ -68,7 +68,7 @@ html {
     border-radius: 60px;
     text-align: center;
     align-content: center;
-    font-weight: 500;
+    font-weight: 550;
     width: 800px;
     height: 60px;
 }
@@ -87,15 +87,15 @@ html {
 
 .btn-blocks a,
 .btn-blocks2 a {
-    font-weight: 600;
+    font-weight: 500;
     padding-top: 10px;
     margin: 0px 0px 15px 0px;
 }
 
 .btn-blocks,
 .btn-blocks2 {
-    height: 200px;
-    width: 185px;
+    height: 190px;
+    width: 160px;
     flex-direction: column;
     display: flex;
     align-content: center;
@@ -111,8 +111,8 @@ html {
 .color-square-btn,
 .color-square-frame,
 .color-square {
-    width: 132px;
-    height: 132px;
+    width: 100px;
+    height: 100px;
     margin-top: 25px;
     border-radius: 30px;
 }
@@ -129,11 +129,11 @@ html {
     justify-content: center;
     border-radius: 36px;
     margin: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .name {
-    font-weight: 500;
+    font-weight: 550;
     font-size: 36px;
     margin-bottom: 20px;
 }
