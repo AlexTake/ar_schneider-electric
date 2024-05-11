@@ -6,14 +6,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 2%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
+@font-face {
+    font-family: openSanstmp;
+    src: url(OpenSans.ttf);
+}
+
 html {
-    font-family: 'OpenSans';
-    font-weight: 600;
+    font-family: openSanstmp;
+    font-weight: bold;
     font-size: 24px;
 }
 
@@ -63,25 +68,28 @@ html {
     border-radius: 60px;
     text-align: center;
     align-content: center;
-    font-weight: 700;
+    font-weight: 500;
     width: 800px;
     height: 60px;
 }
 
 .frame {
-    top: 2%;
+    top: 50%;
     left: 2%;
+    transform: translate(0, -50%);
 }
 
 .btn {
-    top: 2%;
+    top: 50%;
     right: 2%;
+    transform: translate(0, -50%);
 }
 
 .btn-blocks a,
 .btn-blocks2 a {
+    font-weight: 600;
     padding-top: 10px;
-    margin: 5px 0px 10px 0px;
+    margin: 0px 0px 15px 0px;
 }
 
 .btn-blocks,
@@ -105,7 +113,7 @@ html {
 .color-square {
     width: 132px;
     height: 132px;
-    margin-top: 15px;
+    margin-top: 25px;
     border-radius: 30px;
 }
 
@@ -124,7 +132,7 @@ html {
 }
 
 .name {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -145,6 +153,7 @@ html {
 }
 
 #btn-image {
+    margin-right: 20px;
     width: 96px;
     height: 96px;
 }
