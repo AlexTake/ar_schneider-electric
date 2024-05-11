@@ -30,9 +30,9 @@ else
     camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
 
 if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
-    camera.position.set(0, 0.05, 0.4);
+    camera.position.set(0, 0.05, 0.44);
 else
-    camera.position.set(0, 0.05, 0.2);
+    camera.position.set(0, 0.05, 0.22);
 
 
 let frame_color = "anthracite";

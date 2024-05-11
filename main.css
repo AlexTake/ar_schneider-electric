@@ -75,13 +75,13 @@ html {
 
 .frame {
     top: 50%;
-    left: 2%;
+    left: 5%;
     transform: translate(0, -50%);
 }
 
 .btn {
     top: 50%;
-    right: 2%;
+    right: 5%;
     transform: translate(0, -50%);
 }
 
@@ -94,8 +94,8 @@ html {
 
 .btn-blocks,
 .btn-blocks2 {
-    height: 213px;
-    width: 192px;
+    height: 200px;
+    width: 185px;
     flex-direction: column;
     display: flex;
     align-content: center;
@@ -129,6 +129,7 @@ html {
     justify-content: center;
     border-radius: 36px;
     margin: 15px;
+    font-weight: 600;
 }
 
 .name {
